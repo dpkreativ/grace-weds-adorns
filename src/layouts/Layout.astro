@@ -12,9 +12,12 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/red-heart-doodle.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
@@ -31,6 +34,33 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		--red: 255, 0, 0; /* Bright red */
+	--red-dark: 139, 0, 0; /* Darker red */
+	--red-light: 255, 102, 102; /* Lighter red */
+	--red-gradient: linear-gradient(
+		45deg,
+		rgb(var(--red-dark)),
+		rgb(var(--red)) 30%,
+		rgb(var(--red-light)) 60%
+	);
+	--silver-dark: 169, 169, 169; /* Dark silver (Gray) */
+	--silver: 192, 192, 192; /* Standard silver */
+	--silver-light: 211, 211, 211; /* Light silver */
+	--silver-gradient: linear-gradient(
+		45deg,
+		rgb(var(--silver-dark)),
+		rgb(var(--silver)) 30%,
+		rgb(var(--silver-light)) 60%
+	);
+	--gold-dark: 184, 134, 11; /* Dark gold */
+	--gold: 255, 215, 0; /* Standard gold */
+	--gold-light: 255, 239, 148; /* Light gold */
+	--gold-gradient: linear-gradient(
+		45deg,
+		rgb(var(--gold-dark)),
+		rgb(var(--gold)) 30%,
+		rgb(var(--gold-light)) 60%
+	);
 	}
 	html {
 		font-family: system-ui, sans-serif;
@@ -47,4 +77,11 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+
+	.sacramento-regular {
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 </style>
