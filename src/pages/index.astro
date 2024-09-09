@@ -7,7 +7,8 @@ import Card from '../components/Card.astro';
 	<main>
 		<!-- Intro Section -->
 		 <section class="intro">
-			<p class="sacramento-regular text-gradient intro-main">"For the two of us, home isn't a place. It is a person. And we are finally home."</p>
+			<p class="caveat-regular text-gradient intro-main">"For the two of us, home isn't a place. It is a person.</p>
+			<p class="caveat-regular text-gradient intro-main">And we are finally home."</p>
 			<p class="intro-sub">—Stephanie Perkins, "Anna and the French Kiss"</p>
 		 </section>
 		
@@ -54,14 +55,27 @@ import Card from '../components/Card.astro';
 		line-height: 1.6;
 	}
 
+	.intro {
+		text-align: center;
+	}
+
 	.intro-main {
-		font-size: 3.5rem;
+		font-size: 2.5rem;
 	}
 
 	.intro-sub {
-		text-align: right;
 		font-size: 1rem;
 	}
+
+	@media screen and (min-width: 720px) {
+		.intro-main {
+			text-align: left;
+		}
+		.intro-sub {
+			text-align: center;
+		}
+	}
+
 
 	.astro-a {
 		position: absolute;
